@@ -1,0 +1,11 @@
+// 関数
+
+
+@function lineHeight($row, $fz) {
+    @return $row / $fz; // linghe-height計算 行送り/フォントサイズ
+}
+
+@function letterSpacing($av) {
+    @return ($av / 1000)+em; // leter-spacing  av/1000
+    // em以外を指定したい場合は、関数を使わずに通常どおりに記述する
+}

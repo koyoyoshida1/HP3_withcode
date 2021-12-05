@@ -1,0 +1,170 @@
+/****************************************:
+
+blog-details
+
+*****************************************:*/
+
+.details {
+  padding: 56px 0 146px;
+
+  @include mq(lg) {
+    padding: 56px 0 88px;
+  }
+
+  @include mq(md) {
+    padding: 56px 0 70px;
+  }
+
+  &_inner {
+    max-width: 1326px;
+    margin: 0 auto;
+
+    width: 56%;
+
+    @include mq(lg) {
+      width: 90%;
+    }
+  }
+
+  &_imgbox {
+    /* 記事詳細画像*/
+    max-width: 1070px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 40px;
+
+    @include mq(lg) {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  img {
+    height: 100%;
+  }
+
+  &_txtbox {
+    /*テキストエリア*/
+    text-align: left;
+    color: $cBlack;
+    margin-bottom: 149px;
+    width: 100%;
+
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &_ttlbox {
+    margin: 0 auto 28px;
+  }
+
+  &_date {
+    /*日付*/
+    @include rem(40);
+    line-height: lineHight(64, 40);
+
+    @include mq(lg) {
+      @include rem(28);
+      line-height: lineHight(48, 28);
+    }
+
+    @include mq(md) {
+      @include rem(20);
+      line-height: lineHight(32, 20);
+    }
+  }
+
+  &_ttl {
+    /*記事タイトル*/
+    @include rem(40);
+    line-height: lineHight(64, 40);
+    color: $cBlack;
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho";
+
+    @include mq(lg) {
+      @include rem(28);
+      line-height: lineHight(48, 28);
+    }
+
+    @include mq(md) {
+      @include rem(20);
+      line-height: lineHight(32, 20);
+    }
+
+
+  }
+
+  &_txtinner {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_txt {
+    /*記事本文*/
+    @include rem(22);
+
+    @include mq(md) {
+      @include rem(14);
+    }
+  }
+
+
+  &_page {
+    /*ページャー*/
+    display: flex;
+    justify-content: center;
+  }
+
+  &_title {
+    @include rem(28);
+    margin: 0 98px;
+
+    @include mq(md) {
+      margin: 0 56px;
+      @include rem(15);
+    }
+  }
+
+  &_prev {
+    /*戻る*/
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "<";
+      right: -32px;
+
+      @include mq(md) {
+        right: -18px;
+      }
+    }
+  }
+
+  &_next {
+    /*次へ*/
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: ">";
+      left: -32px;
+
+      @include mq(md) {
+        left: -32px;
+      }
+    }
+  }
+
+  &_prev,
+  &_next {
+    @include rem(24);
+
+    @include mq(md) {
+      @include rem(14);
+
+    }
+  }
+}

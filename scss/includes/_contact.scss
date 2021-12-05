@@ -1,0 +1,168 @@
+/****************************************:
+
+contact
+
+*****************************************:*/
+*:focus {
+  outline: none;
+}
+
+.container.__contact {
+    // background: -moz-linear-gradient(top right , rgba(248,76,116,0.5),#fff);
+    // background: -webkit-linear-gradient(top right, rgba(248, 76, 116, 0.5), #fff);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(242, 193, 193, 0.88) 31%, rgba(248, 76, 116, 0.68) 83%, rgba(220, 95, 95, 0.63) 96%, rgba(220, 95, 95, 0.61) 100%);
+}
+
+.contact {
+
+  width: 100%;
+  // height: 100vh;
+  margin: 0 auto;
+
+  &_main {
+    padding-top: 202px;
+
+    @include mq(lg) {
+      padding-top: 120px;
+
+    }
+    @include mq(md) {
+      padding-top: 69px;
+
+    }
+  }
+
+.section_ttl{
+
+  margin: 36px 0;
+  @include rem(60);
+  font-family: 'Parisienne';
+
+  color: $cBlack;
+
+  @include mq(md){
+    @include rem(32);
+    margin: 20px 0;
+    }
+}
+
+  .section_inner{
+    min-width: 420px;
+    width: 52%;
+    height: 62.5%;
+    margin: 0 auto;
+    padding: 24px;
+    background: $cWhite;
+
+    @include mq(md){
+      min-width: 250px;
+      width: 86%;
+      height: 79%;
+    }
+  }
+
+  &_form{
+    text-align: center;
+
+    &_box{
+      // inputテキスト入力エリア
+      background:#ECECEC;
+      border: 1px solid #707070;
+
+      @include mq(md){
+        
+        display: block;
+        width: 100%;
+        
+      }
+    }
+  }
+
+  &_box{
+    // ttl&入力エリアdiv
+    display: flex;
+    justify-content: center;
+    margin: 0 0 24px 0;
+
+    
+    @include mq(md){
+      display: block;
+      width: 100%;
+      
+    }
+  }
+
+  &_form_ttl {
+    /* contactフォームのラベルタイトル*/
+    
+    width: 100px;
+    margin-bottom: 24px;
+    margin-right: 10%;
+    text-align: left;
+    @include rem(18);
+
+    @include mq(md){
+      display: flex;
+      justify-content: start;
+      margin-right: 0;
+      margin-bottom: 8px;
+      @include rem(14);
+    }
+
+  }
+
+  &_form_box {
+    /* contactフォームの入力エリア*/
+    
+    width: 330px;
+    height: 48px;
+    padding: 0 0 0 10px;
+    @include rem(14);
+    font-family: $fontMain;
+
+    @include mq(md){
+      width: 100%;
+      height: 36px;
+      @include rem(12);
+    }
+
+  }
+
+  .__area{
+    // textareaのttl&入力フォームdiv
+    @include mq(md){
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &_txtarea {
+    /* contactフォームの入力エリア*/
+
+    width: 330px;
+    height: 202px;
+    margin-bottom: 36px;
+    padding: 10px;
+    background:#ECECEC;
+    border: 1px solid #707070;
+    @include rem(14);
+    font-family: $fontMain;
+
+    @include mq(md){
+      width: 100%;
+      height: 202px;
+      margin-bottom: 8px;
+      @include rem(12);
+    }
+
+    
+  }
+
+  &_btn{
+    @include mq(md){
+
+      margin-bottom: 12px;
+    }
+  }
+
+}

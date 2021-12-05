@@ -1,0 +1,155 @@
+/****************************************:
+
+blog
+
+*****************************************:*/
+
+.blog {
+  padding: 20px 0 137px;
+  
+  @include mq(lg) {
+    padding: 60px 0 0;
+    
+  }
+  @include mq(md) {
+    padding: 33px 0 34px;
+  }
+
+  .section_ttl {
+    font-family: 'Parisienne', cursive;
+    margin-bottom: 104px;
+
+    @include mq(lg) {
+      @include rem(80);
+      margin-bottom: 32px;
+    }
+    @include mq(md) {
+      @include rem(40);
+      margin-bottom: 24px;
+    }
+  }
+
+  .section_inner {
+    width: 90%;
+  }
+
+  &_content {
+    /*blogコンテンツ*/
+    display: flex;
+    margin-bottom: 170px;
+    cursor: pointer;
+    position: relative;
+
+    @include mq (lg) {
+      margin-bottom: 12%;
+    }
+
+    @include mq(md) {
+      margin-bottom: 13%;
+    }
+
+    &:nth-child(even) {
+      /*見出しと画像左右入れ替え*/
+      flex-direction: row-reverse;
+
+      .blog_imgbox {
+        margin-right: auto;
+        margin-left: initial;
+      }
+
+      .blog_txtbox {
+        text-align: right;
+      }
+
+      .blog_txt {
+        text-align: right;
+      }
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &_imgbox {
+    /*記事画像*/
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+
+    @include mq(lg) {
+      width: 75%;
+      height: 50%;
+    }
+
+    @include mq(md) {
+      width: 83%;
+      height: 20%;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+  }
+
+  &_txtbox {
+    /*記事テキストエリア*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 5px 5px 5px $cWhite;
+
+    &:after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: $cBlack;
+      transform: scale(0, 1);
+      transform-origin: center top;
+      transition: transform .3s;
+    }
+
+    &:hover::after {
+      transform: scale(1, 1);
+    }
+
+  }
+
+
+  &_ttl {
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho";
+    color: $cBlack;
+    @include rem(70);
+    letter-spacing: letterSpacing(50);
+
+    @include mq(lg) {
+      @include rem(50);
+    }
+
+    @include mq(md) {
+      @include rem(20);
+      letter-spacing: letterSpacing(20);
+    }
+  }
+
+  &_txt {
+    @include rem(40);
+    text-align: left;
+
+    @include mq(lg) {
+      @include rem(32);
+    }
+
+    @include mq(md) {
+      @include rem(12);
+    }
+
+    &:nth-child(odd) {
+      text-align: right;
+    }
+
+  }
+}

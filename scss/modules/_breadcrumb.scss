@@ -1,0 +1,95 @@
+/* パンくずリスト */
+
+.breadcrumb {
+  max-width: 90%;
+  height: 24px;
+  margin: 0 auto;
+
+  @include mq(md) {
+    max-width: 83%;
+    height: 35px;
+  }
+
+  @include mq(lg) {
+    max-width: 63%;
+    height: 35px;
+  }
+
+  // &_inner {
+  //   background-color: $CLight_blue;
+  // }
+
+  ul {
+    width: 100%;
+    line-height: 24px;
+    display: flex;
+    // 下の2つのプロパティは消していいかも
+    overflow-x: auto; //パンくずリストが長くなった時に横スクロールするため
+    white-space: nowrap; //折り返し防止
+
+    @include mq(md) {
+      line-height: 35px;
+    }
+  }
+
+  li {
+    @include rem(12);
+
+    @include mq(md) {
+      @include rem(14);
+    }
+
+    @include mq(lg) {
+      @include rem(16);
+    }
+
+    &::after {
+      content: ">";
+      margin-right: 12px;
+      @include rem(12);
+
+      @include mq(md) {
+        margin-right: 17px;
+        @include rem(14);
+      }
+
+      @include mq(lg) {
+        margin-right: 16px;
+        @include rem(16);
+      }
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+
+  &_img {
+    img {
+      width: 15px;
+      margin: 0 5px 7px 0;
+
+      @include mq(md) {
+        width: 18px;
+        margin: 0 9px 11px 0;
+      }
+
+      @include mq(lg) {
+        width: 20px;
+        margin: 0 8px 11px 0;
+      }
+    }
+  }
+
+  a {
+    margin-right: 12px;
+
+    @include mq(md) {
+      margin-right: 17px;
+    }
+
+    @include mq(lg) {
+      margin-right: 16px;
+    }
+  }
+}

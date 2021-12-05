@@ -1,0 +1,196 @@
+// サイトコンテンツスタイル用
+// index.html用
+@charset "utf-8";
+
+.btnGradient {
+  padding: 15px 70px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  display: inline-block;
+  transition: all 0.4s ease-out;
+}
+
+.btnGradient {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btnGradient:hover {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(100deg, #6aace9 0%, #6444aa 30%, #238b87 100%);
+  background-size: 200% auto;
+  background-position: right center;
+  box-shadow: 0 5px 10px rgba(220, 130, 140, 0.3);
+}
+
+.slider_box {
+  width: 100%;
+  height: 100vh;
+}
+
+.slider_imgbox{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide_img{
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  transition: 4s linear transform .4s;
+
+
+  &.zoom {
+      transform: scale(1.05);
+  }
+
+}
+
+.blur{
+	animation-name: blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+
+
+.fade{
+    opacity: 0;
+}
+
+
+.textSepa {
+  margin-bottom: 60px;
+}
+
+.box {
+  padding: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.season_area {
+  background: url("../images/spring/sakura.jpg") no-repeat center / cover;
+}
+
+.season_area.box {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .season_area.box {
+    justify-content: center;
+  }
+}
+
+.spring_area {
+  background: url("../images/spring/haru.jpg") no-repeat center / cover;
+}
+
+.summer_area {
+  background: url("../images/summer/summer.jpg") no-repeat center / cover;
+}
+
+.autumn_area {
+  background: url("../images/autumn/fall.jpg") no-repeat center / cover;
+}
+
+.winter_area {
+  background: url("../images/winter/fuyu.jpg") no-repeat center / cover;
+}
+
+.header_ul {
+  display: flex;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 999;
+
+  @include mq(md) {
+    top: 16px;
+  }
+}
+
+.header_li {
+  margin: 0 10px;
+
+  @include mq(md) {
+    @include rem(12);
+  }
+}
+
+.header_a {
+  transition: all 0.5s;
+}
+
+.header_a:hover {
+  opacity: 0.5;
+}
+
+.descript_box {
+  width: 100%;
+  max-width: 300px;
+  padding: 45px;
+  margin: 0 0 0 45px;
+  text-align: left;
+  letter-spacing: 0.03em;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .descript_box {
+    margin: 0;
+  }
+}
+
+.descript_h2 {
+  margin: 0 0 40px 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.descript_span {
+  font-size: 20px;
+  display: block;
+}
+
+.descript_p {
+  margin: 0 0 45px 0;
+}
+
+.footer_small {
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.__mt {
+  padding: 0 !important;
+  margin-top: -40px !important;
+}

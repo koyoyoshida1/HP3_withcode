@@ -1,0 +1,28 @@
+.button{
+  font-family: $fontMain;
+  width: 153px;
+  padding: 5px;
+  @include rem(20);
+  border: 1px solid #000;
+  color: $cWhite;
+  background: $cBlack;
+  transition: .5s;
+
+  margin: 0 auto;
+  display: block;
+
+  @include mq(md){
+    width: 120px;
+    padding: 0;
+    @include rem(16);
+  }
+  
+
+  &:hover{
+
+    color: $cBlack;
+    background: $cWhite;
+
+  }
+
+}

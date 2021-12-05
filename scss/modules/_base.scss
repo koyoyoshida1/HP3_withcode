@@ -1,0 +1,69 @@
+// ベーススタイル用
+
+
+body {
+    @include rem(16);
+    margin: 0 auto;
+    font-family: $fontMain;
+    color: $cBlack;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+
+/*************
+
+モック画像
+終わったら削除
+
+**************/
+
+
+.mock {
+    /* モック画像 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 375px;
+    opacity: 0.3;
+
+    /* 反転 */
+    filter: hue-rotate(180deg);
+
+    /* テキストを掴まないように */
+    pointer-events: none;
+
+    z-index: 999;
+
+}
+
+
+//共通タイトル
+.section_ttl {
+    @include rem(120); //pcファースト
+    display: block;
+    text-align: center;
+}
+
+
+//セクションの共通inner
+.section_inner {
+    width: 100%;
+    max-width: 1329px; // pcファースト
+    margin: 0 auto;
+
+    @include mq(md) {
+        max-width: 324px;
+    }
+
+}
+
+

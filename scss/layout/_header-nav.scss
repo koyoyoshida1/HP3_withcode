@@ -1,0 +1,46 @@
+/****************************************:
+
+header
+
+*****************************************:*/
+
+
+
+/* heading */
+
+.top_ttl-box{
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top:50%;
+  left:50%;
+}
+
+.top_ttl-box .top_ttl_h1,h2 {
+  color: #fff;
+  font-size:6vw;
+  font-family: 'Parisienne', cursive;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.top_ttl-box p{
+  font-size:1.2vw;
+  letter-spacing: 0.5em;
+}
+
+@media only screen and (max-width:768px) {
+.top_ttl-box h1,h2{
+    font-size:4em;
+    line-height: 1.5;
+  }
+
+.top_ttl-box p{
+    font-size:1.5em;
+    letter-spacing: 0.2em;
+  }
+}
+
+

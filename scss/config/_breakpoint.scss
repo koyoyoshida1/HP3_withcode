@@ -1,0 +1,19 @@
+//レスポンシブ
+
+//ブレイクポイント設定用
+
+// 部分的にブレイクポイント必要な場合は適宜追加
+// モバイルファースト：min-width (以下)
+// PCファースト：max-width
+
+
+$breakpoints: (
+  'lg': (max-width: 960px),
+  'md': (max-width: 520px),
+  // 'xs': (min-width: 0),
+) !default;
+
+
+
+
+

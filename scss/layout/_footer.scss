@@ -1,0 +1,26 @@
+/****************************************:
+
+footer
+
+*****************************************:*/
+.footer{
+
+  margin-top: 116px;
+  padding-bottom: 64px;
+  text-align: center;  
+
+  @include mq(md){
+    margin-top: 28px;
+    padding-bottom: 32px;
+  }
+
+  &_txt{
+
+    @include rem(10);
+
+    &.__w {
+      color: $cWhite;
+    }
+  }
+  
+}
